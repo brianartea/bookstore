@@ -80,7 +80,7 @@ function UpdateForm({ updateBook, resetBookId }) {
                         value={newTitle}
                         onChange={(e) => setNewTitle(e.target.value)}
                         className="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300"
-                        placeholder="My name is jeff"
+                        placeholder="Book title..."
                       />
                     </div>
                   </div>
@@ -129,8 +129,7 @@ function UpdateForm({ updateBook, resetBookId }) {
                   </div>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Consequatur amet labore.
+                      Copy and paste the image url above.
                     </p>
                   </div>
                 </div>
