@@ -71,8 +71,7 @@ export default function Success() {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consequatur amet labore.
+                        Thank you for shopping with Knowledge.
                       </p>
                     </div>
                   </div>

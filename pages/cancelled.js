@@ -71,8 +71,7 @@ export default function Cancelled() {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consequatur amet labore.
+                        Your order has been cancelled.
                       </p>
                     </div>
                   </div>
