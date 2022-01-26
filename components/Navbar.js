@@ -122,7 +122,7 @@ export default function Navbar() {
                     <Popover.Button
                       className={classNames(
                         open ? "text-gray-900" : "text-gray-500",
-                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none"
                       )}
                     >
                       <span>Categories</span>
@@ -151,7 +151,7 @@ export default function Navbar() {
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100"
                               >
                                 <item.icon
                                   className="flex-shrink-0 h-6 w-6 text-indigo-600"
@@ -211,7 +211,7 @@ export default function Navbar() {
                     <Popover.Button
                       className={classNames(
                         open ? "text-gray-900" : "text-gray-500",
-                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none"
                       )}
                     >
                       <span>More</span>
@@ -240,7 +240,7 @@ export default function Navbar() {
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100"
                               >
                                 <item.icon
                                   className="flex-shrink-0 h-6 w-6 text-indigo-600"
