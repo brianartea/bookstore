@@ -184,13 +184,13 @@ export default function Home() {
     >
       <Navbar />
       <Header />
-      <div className="bg-white">
+      <div className="bg-white dark:bg-zinc-900">
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <div className="flex place-items-center justify-between">
-            <h2 className="text-xl font-bold underline-offset-4 decoration-1 text-gray-900">
+            <h2 className="text-xl font-bold underline-offset-4 decoration-1 text-gray-900 dark:text-gray-300">
               Our Latest Additions
             </h2>
-            <h2 className="text-sm font-bold underline-offset-4 decoration-1 text-">
+            <h2 className="text-sm font-bold underline-offset-4 decoration-1 dark:text-gray-300">
               View More
             </h2>
           </div>
@@ -203,7 +203,10 @@ export default function Home() {
           <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-7">
             {books &&
               books.map(({ id, title, price, img }) => (
-                <div key={id} className=" shadow-lg rounded-md py-2 px-2">
+                <div
+                  key={id}
+                  className="dark:bg-gray-100 shadow-lg rounded-md py-2 px-2"
+                >
                   <div className="relative">
                     <div className="relative w-full h-72 rounded-lg overflow-hidden">
                       <img
@@ -213,7 +216,9 @@ export default function Home() {
                       />
                     </div>
                     <div className="relative mt-4">
-                      <p className="text-sm text-gray-500">Audiobook</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-900">
+                        Audiobook
+                      </p>
                       <h3 className="text-xl truncate max-w-xs  font-semibold text-gray-900">
                         {title}
                       </h3>
@@ -239,8 +244,10 @@ export default function Home() {
                       <span
                         href="/"
                         className={`relative flex ${
-                          item ? "bg-gray-200" : "bg-gray-100 hover:bg-gray-200"
-                        } border border-transparent rounded-md py-2 px-8 h-full items-center justify-center text-sm font-medium text-gray-900 `}
+                          item
+                            ? "bg-gray-200 dark:bg-gray-500"
+                            : "bg-gray-100 dark:bg-gray-700 hover:bg-black"
+                        } border border-transparent rounded-md py-2 px-8 h-full items-center justify-center text-sm font-medium text-gray-900 dark:text-gray-100 dark:hover:text-white `}
                       >
                         {!item ? "Buy now" : "Loading..."}
                         <span className="sr-only">, {title}</span>
@@ -257,7 +264,7 @@ export default function Home() {
                         <span
                           href="/"
                           className={`relative flex ${
-                            item ? "bg-red-400" : "bg-red-500 hover:bg-red-400"
+                            item ? "bg-red-400" : "bg-red-500 hover:bg-red-600"
                           } border border-transparent rounded-md py-2  items-center justify-center text-sm font-medium text-white`}
                         >
                           <XCircleIcon className="h-6 w-6" />
@@ -275,8 +282,8 @@ export default function Home() {
                           className={`relative flex ${
                             item
                               ? "bg-green-400"
-                              : "bg-green-500 hover:bg-green-400"
-                          } border border-transparent rounded-md py-2 items-center justify-center text-sm font-medium text-white`}
+                              : "bg-green-600 hover:bg-green-700"
+                          } border border-transparent rounded-md py-2 items-center justify-center text-sm font-medium text-white dark:text-gray-200`}
                         >
                           <RefreshIcon className="h-6 w-6" />
                         </span>
