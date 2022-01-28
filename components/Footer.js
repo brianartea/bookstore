@@ -191,13 +191,13 @@ export default function Footer() {
                 id="email-address"
                 autoComplete="email"
                 required
-                className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400"
+                className="appearance-none min-w-0 w-full bg-white dark:bg-black border dark:border-gray-600 rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring focus:ring-offset-gray-800 focus:ring-white focus:border-white dark:focus:border-gray-300 dark:focus:placeholder-gray-400"
                 placeholder="Enter your email"
               />
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-indigo-500 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                  className="w-full bg-indigo-500 border dark:border-gray-600 dark:hover:border-gray-300 dark:bg-black rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-600 dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
                   Subscribe
                 </button>
