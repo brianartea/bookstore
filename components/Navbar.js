@@ -113,7 +113,7 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400 duration-200">
+              <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-900 hover:bg-gray-100 duration-200">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -127,7 +127,7 @@ export default function Navbar() {
                         open
                           ? "text-gray-900 dark:text-gray-300"
                           : "text-gray-500 dark:text-gray-200",
-                        "group bg-white dark:bg-zinc-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 focus:outline-none duration-200"
+                        "group bg-white dark:bg-zinc-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 duration-200"
                       )}
                     >
                       <span>Categories</span>
