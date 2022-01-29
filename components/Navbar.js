@@ -1,4 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
+import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition, Disclosure, Menu } from "@headlessui/react";
 import {
@@ -105,11 +106,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#">
-                <h1 className="font-bold italic text-xl dark:text-gray-200 dark:hover:text-white dark:active:text-gray-50">
+              <Link href="/">
+                <a className="font-bold italic text-xl dark:text-gray-200 dark:hover:text-white dark:active:text-gray-50">
                   KNOWLEDGE
-                </h1>
-              </a>
+                </a>
+              </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
               <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400 duration-200">
@@ -338,11 +339,11 @@ export default function Navbar() {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <a href="#">
-                      <h1 className="font-bold italic text-xl dark:text-gray-200 dark:hover:text-white dark:active:text-gray-50">
+                    <Link href="/">
+                      <a className="font-bold italic text-xl dark:text-gray-200 dark:hover:text-white dark:active:text-gray-50">
                         KNOWLEDGE
-                      </h1>
-                    </a>
+                      </a>
+                    </Link>
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-900 dark:hover:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400">
