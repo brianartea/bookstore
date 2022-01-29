@@ -89,7 +89,7 @@ function UpdateForm({ updateBook, resetBookId }) {
                       htmlFor="company-website"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-200"
                     >
-                      Price
+                      Book Price
                     </label>
                     <div className="mt-1 flex rounded-md shadow-sm">
                       <span className="inline-flex items-center px-3 rounded-l-md border border-r-0 dark:text-gray-200 border-gray-300 dark:border-gray-500 bg-gray-50 dark:bg-zinc-900 text-gray-500 sm:text-sm">

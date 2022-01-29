@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, Transition, Disclosure, Menu } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -112,7 +112,7 @@ export default function Navbar() {
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400 duration-200">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -126,7 +126,7 @@ export default function Navbar() {
                         open
                           ? "text-gray-900 dark:text-gray-300"
                           : "text-gray-500 dark:text-gray-200",
-                        "group bg-white dark:bg-zinc-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 focus:outline-none"
+                        "group bg-white dark:bg-zinc-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 focus:outline-none duration-200"
                       )}
                     >
                       <span>Categories</span>
@@ -151,7 +151,7 @@ export default function Navbar() {
                       leaveTo="opacity-0 translate-y-1"
                     >
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden border dark:border-gray-600">
                           <div className="relative grid gap-6 bg-white dark:bg-zinc-800 px-5 py-6 sm:gap-8 sm:p-8">
                             {solutions.map((item) => (
                               <a
@@ -242,7 +242,7 @@ export default function Navbar() {
                       leaveTo="opacity-0 translate-y-1"
                     >
                       <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden border border-gray-600">
                           <div className="relative grid gap-6 bg-white dark:bg-zinc-800 px-5 py-6 sm:gap-8 sm:p-8">
                             {resources.map((item) => (
                               <a
@@ -334,18 +334,18 @@ export default function Navbar() {
             focus
             className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-zinc-900 divide-y-2 divide-gray-50 dark:divide-gray-600 border border-gray-600">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt="Workflow"
-                    />
+                    <a href="/">
+                      <h1 className="font-bold italic text-xl dark:text-gray-200 dark:hover:text-white dark:active:text-gray-50">
+                        KNOWLEDGE
+                      </h1>
+                    </a>
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="bg-white dark:bg-zinc-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-900 dark:hover:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -357,13 +357,13 @@ export default function Navbar() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:bg-zinc-900 dark:hover:bg-black dark:text-gray-400 dark:hover:text-gray-100"
                       >
                         <item.icon
-                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                          className="flex-shrink-0 h-6 w-6 text-indigo-600 dark:text-indigo-300 dark:hover:text-indigo-100"
                           aria-hidden="true"
                         />
-                        <span className="ml-3 text-base font-medium text-gray-900">
+                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
                           {item.name}
                         </span>
                       </a>
@@ -375,14 +375,14 @@ export default function Navbar() {
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <a
                     href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     Pricing
                   </a>
 
                   <a
                     href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-100"
                   >
                     Docs
                   </a>
@@ -390,7 +390,7 @@ export default function Navbar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-100"
                     >
                       {item.name}
                     </a>
@@ -399,15 +399,15 @@ export default function Navbar() {
                 <div>
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 dark:bg-black hover:bg-indigo-700 dark:hover:bg-zinc-900 dark:hover:text-white dark:border-gray-400 dark:hover:border-gray-100"
                   >
                     Sign up
                   </a>
-                  <p className="mt-6 text-center text-base font-medium text-gray-500">
+                  <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-gray-400">
                     Existing customer?{" "}
                     <a
                       href="#"
-                      className="text-indigo-600 hover:text-indigo-500"
+                      className="text-indigo-600 dark:text-gray-400 dark:hover:text-white hover:text-indigo-500"
                     >
                       Sign in
                     </a>
