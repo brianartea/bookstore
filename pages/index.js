@@ -75,7 +75,7 @@ export default function Home() {
 
   // NEW BOOK INPUT STATES
   const [newTitle, setNewTitle] = useState("");
-  const [newPrice, setNewPrice] = useState(0);
+  const [newPrice, setNewPrice] = useState("");
   const [newImage, setNewImage] = useState("");
 
   // UPDATING STATE
@@ -106,7 +106,7 @@ export default function Home() {
       img: newImage,
     });
     setNewTitle("");
-    setNewPrice(0);
+    setNewPrice("");
     setNewImage("");
   };
 
