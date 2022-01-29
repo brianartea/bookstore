@@ -338,7 +338,7 @@ export default function Navbar() {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <a href="/">
+                    <a href="#">
                       <h1 className="font-bold italic text-xl dark:text-gray-200 dark:hover:text-white dark:active:text-gray-50">
                         KNOWLEDGE
                       </h1>
