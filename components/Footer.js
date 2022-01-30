@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// Change links
 const navigation = {
   solutions: [
     { name: "Marketing", href: "#" },
@@ -25,6 +26,7 @@ const navigation = {
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
   ],
+  // Change social media links to your own links
   social: [
     {
       name: "Facebook",
@@ -93,7 +95,7 @@ const navigation = {
 export default function Footer() {
   return (
     <footer
-      className="bg-zinc-900 dark:bg-zinc-900"
+      className="bg-zinc-900 dark:bg-zinc-900 border-t border-zinc-600 dark:border-zinc-600"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
@@ -222,7 +224,9 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy; {new Date().getFullYear()} KNOWLEDGE. All rights reserved.
+            &copy; {new Date().getFullYear()}{" "}
+            <span className="text-base text-gray-400 italic">KNOWLEDGE</span>,
+            All rights reserved.
           </p>
         </div>
       </div>
