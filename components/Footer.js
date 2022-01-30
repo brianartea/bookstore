@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const navigation = {
   solutions: [
     { name: "Marketing", href: "#" },
@@ -61,7 +63,7 @@ const navigation = {
     },
     {
       name: "GitHub",
-      href: "#",
+      href: "https://github.com/brianartea",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -91,7 +93,7 @@ const navigation = {
 export default function Footer() {
   return (
     <footer
-      className="bg-gray-800 dark:bg-zinc-900"
+      className="bg-zinc-900 dark:bg-zinc-900"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
@@ -197,7 +199,7 @@ export default function Footer() {
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-indigo-500 border dark:border-gray-600 dark:hover:border-gray-300 dark:bg-black rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white dark:text-gray-400 hover:bg-indigo-600 dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 border border-transparent dark:border-gray-600 dark:hover:border-gray-300 dark:bg-black rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white dark:text-gray-400 dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
                   Subscribe
                 </button>
@@ -208,14 +210,15 @@ export default function Footer() {
         <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-gray-300"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
+              <Link key={item.name} href={item.href}>
+                <a
+                  className="text-gray-400 hover:text-gray-300"
+                  target="_blank"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              </Link>
             ))}
           </div>
           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">

@@ -247,7 +247,7 @@ export default function Home() {
                           item
                             ? "bg-gray-200 dark:bg-gray-500"
                             : "bg-gray-100 dark:bg-gray-700 hover:bg-black"
-                        } border border-transparent rounded-md py-2 px-8 h-full items-center justify-center text-sm font-medium text-gray-900 dark:text-gray-100 dark:hover:text-white `}
+                        } border border-transparent rounded-md py-2 px-8 h-full items-center justify-center text-sm font-medium text-gray-900 hover:text-white dark:text-gray-100 dark:hover:text-white duration-150 `}
                       >
                         {!item ? "Buy now" : "Loading..."}
                         <span className="sr-only">, {title}</span>
